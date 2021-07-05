@@ -10,8 +10,7 @@ import UIKit
 class PersonsTableVC: UITableViewController {
 
     @IBOutlet var personsListTable: UITableView!
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +40,25 @@ class PersonsTableVC: UITableViewController {
         // Configure the cell...
 
         return cell
+    }
+    
+    func createPerson () -> Person {
+        
+        Person.arrayNames.shuffle()
+        Person.arraySurnames.shuffle()
+        Person.arrayEmails.shuffle()
+        Person.arrayPhones.shuffle()
+        
+        if Person.arrayPhones.count != 0 {
+            
+        let name = Person.arrayNames.remove(at: 0)
+        let surname = Person.arraySurnames.remove(at: 0)
+        let phone = Person.arrayPhones.remove(at: 0)
+        let email = Person.arrayEmails.remove(at: 0)
+            
+            let somePerson = Person.init(name: name, surname: surname, phone: phone, email: email)
+            return { somePerson }()
+        }
     }
     
 

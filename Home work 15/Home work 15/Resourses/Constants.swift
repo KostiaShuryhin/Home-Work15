@@ -12,7 +12,16 @@ struct Person {
     static var phone: String = ""
     static var email: String = ""
     
-    static let arrayNames = [
+    init(name: String, surname: String, phone: String, email: String) {
+        
+        Person.name = name
+        Person.surname = surname
+        Person.phone = phone
+        Person.email = email
+        
+    }
+    
+    static var arrayNames = [
         "Stuart",
         "Walter",
         "Charles",
@@ -24,7 +33,7 @@ struct Person {
         "Peter",
         "Frank"
     ]
-   static let arraySurnames = [
+   static var arraySurnames = [
         "Pearson",
         "Owens",
         "Henderson",
@@ -36,7 +45,7 @@ struct Person {
         "Atkinson",
         "Phillips"
     ]
-   static let arrayPhones = [
+   static var arrayPhones = [
         "(8029)987-86-92",
         "(8029)434-53-76",
         "(8029)303-75-66",
@@ -48,7 +57,7 @@ struct Person {
         "(8029)396-71-05",
         "(8029)984-68-55"
     ]
-    static let arrayEmails = [
+    static var arrayEmails = [
         "hiyeroucocrau-8298@yopmail.com",
         "teiffurezeba-6494@yopmail.com",
         "toixigayoufe-9325@yopmail.com",
@@ -61,5 +70,4 @@ struct Person {
         "ratribaprodda-9232@yopmail.com"
     ]
 }
-
 
