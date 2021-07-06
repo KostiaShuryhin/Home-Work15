@@ -6,21 +6,9 @@
 //
 
 import Foundation
-struct Person {
-    static var name: String = ""
-    static var surname: String = ""
-    static var phone: String = ""
-    static var email: String = ""
-    
-    init(name: String, surname: String, phone: String, email: String) {
-        
-        Person.name = name
-        Person.surname = surname
-        Person.phone = phone
-        Person.email = email
-        
-    }
-    
+
+struct DataStorage {
+
     static var arrayNames = [
         "Stuart",
         "Walter",
@@ -33,7 +21,7 @@ struct Person {
         "Peter",
         "Frank"
     ]
-   static var arraySurnames = [
+    static var arraySurnames = [
         "Pearson",
         "Owens",
         "Henderson",
@@ -45,7 +33,7 @@ struct Person {
         "Atkinson",
         "Phillips"
     ]
-   static var arrayPhones = [
+    static var arrayPhones = [
         "(8029)987-86-92",
         "(8029)434-53-76",
         "(8029)303-75-66",
@@ -70,4 +58,7 @@ struct Person {
         "ratribaprodda-9232@yopmail.com"
     ]
 }
+
+
+
 
